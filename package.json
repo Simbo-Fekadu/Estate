@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongobd": "^0.0.1-security.0",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3"
+  }
+}
