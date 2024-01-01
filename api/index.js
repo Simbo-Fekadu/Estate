@@ -1,9 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+import express from 'express';
+import { connect } from 'mongoose';
+import { config } from 'dotenv';
+import userRouter from './routes/user.route.js';
 
-dotenv.config();
-mongoose.connect(process.env.mymongo).then(() => {
+config();
+connect(process.env.mymongo).then(() => {
     console.log("Connected to MongoDB")
 }).catch((err) => {
     console.log(err);
@@ -11,5 +12,7 @@ mongoose.connect(process.env.mymongo).then(() => {
 
 const app = express();
 app.listen(3000, () => {
-    console.log("server running on port 3000");
+    console.log('server is running on port 3000')
 });
+
+app.use("/api/user", userRouter);
