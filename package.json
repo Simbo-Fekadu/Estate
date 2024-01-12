@@ -5,6 +5,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongobd": "^0.0.1-security.0",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.0.3"
+    "mongoose": "^8.0.3",
+    "react-persist": "^1.0.2",
+    "redux-persist": "^6.0.0"
   }
 }
