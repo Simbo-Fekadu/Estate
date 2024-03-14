@@ -4,8 +4,8 @@ import {
   getDownloadURL,
   getStorage,
   uploadBytesResumable,
+  ref,
 } from "firebase/storage";
-import { ref } from "firebase/storage";
 import { app } from "../firebase";
 import {
   deleteUserFailure,
@@ -19,6 +19,8 @@ import {
   updateUserSuccess,
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
 const Profile = () => {
   const [filePerc, setFilePerc] = useState(0);
   const [fileUploadError, setFileUploadError] = useState(false);
@@ -190,12 +192,12 @@ const Profile = () => {
         >
           {loading ? "Loading..." : "Update"}
         </button>
-        <button
-          disabled={loading}
-          className="bg-green-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80"
+        <Link
+          className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          to={"/create-listing"}
         >
-          {loading ? "Loading..." : "Create Listing"}
-        </button>
+          Create Listing
+        </Link>
       </form>
       <div className="flex justify-between mt-5">
         <span
