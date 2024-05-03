@@ -52,7 +52,7 @@ export default function Search() {
       if (data.length > 8) {
         setShowMore(true);
       } else {
-        showMore(false);
+        setShowMore(false);
       }
       setListings(data);
       setLoading(false);
