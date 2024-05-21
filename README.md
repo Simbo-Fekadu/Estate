@@ -1,3 +1,2 @@
-This is the the rentify website I have been learning from @sahandghavidel some more features will be coming soon...
-
+This is the the rentify website
 https://rentify-6y17.onrender.com/
